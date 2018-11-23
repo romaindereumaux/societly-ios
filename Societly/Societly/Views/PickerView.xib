@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.otf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PickerView">
+            <connections>
+                <outlet property="icon" destination="5sD-wF-IQf" id="4fJ-f5-vaa"/>
+                <outlet property="titleLabel" destination="4tD-WJ-Vqm" id="s9S-X2-Dik"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="276" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tD-WJ-Vqm">
+                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_back" translatesAutoresizingMaskIntoConstraints="NO" id="5sD-wF-IQf">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="14" id="TQn-Jd-Rsk"/>
+                        <constraint firstAttribute="height" constant="14" id="tjn-rY-YUt"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="4tD-WJ-Vqm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="5It-Pc-UJj"/>
+                <constraint firstAttribute="trailing" secondItem="5sD-wF-IQf" secondAttribute="trailing" constant="25" id="Kar-Fk-1gl"/>
+                <constraint firstItem="5sD-wF-IQf" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="jtG-hY-gBa"/>
+                <constraint firstItem="4tD-WJ-Vqm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="nYm-0E-lUk"/>
+                <constraint firstItem="5sD-wF-IQf" firstAttribute="leading" secondItem="4tD-WJ-Vqm" secondAttribute="trailing" constant="10" id="ntZ-ag-J2K"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="YWV-oV-WCM" appends="YES" id="Oq1-op-kh8"/>
+            </connections>
+        </view>
+        <tapGestureRecognizer id="YWV-oV-WCM">
+            <connections>
+                <action selector="pickerTapped:" destination="-1" id="7y3-Cl-16u"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="icn_back" width="44" height="44"/>
+    </resources>
+</document>

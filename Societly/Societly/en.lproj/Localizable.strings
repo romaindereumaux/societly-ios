@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  Societly
+
+  Created by Lauri Eskor on 28/09/15.
+  Copyright © 2015 MobiLab. All rights reserved.
+*/
+
+"agree" = "Agree";
+"disagree" = "Disagree";
+"neutral" = "Neutral";
+"tend to disagree" = "Tend to\ndisagree";
+"tend to agree" = "Tend to\nagree";
+
+"tutorial text" = "Swipe the\ncard in\ndesired\ndirection";
+
+"start" = "start";
+"landing title text" = "Find out your\npresidential\ncandidate of 2016";
+"landing middle text" = "Take a few minutes to inform yourself where you stand relative to the candidates.";
+
+"enter your email" = "Please enter your\nemail";
+"email" = "Email";
+"continue" = "Continue";
+"you can" = "You can";
+"skip" = "skip";
+"this step" = "this step";
+
+"reset" = "reset";
+"you can reset" = "You can reset this candidate list and start again with questionnaire.";
+
+"Presidental" = "Presidental";
+"Senate" = "Senate";
+"House of Representatives" = "House of Representatives";
+"No candidates" = "No candidates running for senate in this state.";
+
+"Log out" = "Log out";
+"Are you sure you want to log out?" = "Are you sure you want to log out?";
+
+"Restart" = "Restart";
+"Restarting will clear all your answers. Do you want to continue?" = "Restarting will clear all your answers. Do you want to continue?";

@@ -1,0 +1,9 @@
+target ‘Societly’ do
+
+pod 'PureLayout'
+pod 'AFNetworking'
+pod 'AFNetworkActivityLogger'
+pod 'MBProgressHUD'
+pod 'Google/SignIn'
+
+end

@@ -1,0 +1,19 @@
+{ "questionSetId": "1",
+    "questions": [
+                  {	"questionId": "1",
+                  "questionText": "Eesti majandus peab rohkem kasvama, alles siis saab hakata parandama inimeste heaolu."
+                  },
+                  {	"questionId": "2",
+                  "questionText": "Eestis tuleb kehtestada astmeline tulumaks."
+                  },
+                  {	"questionId": "3",
+                  "questionText": "Sotsiaaltoetuste suurendamiseks tuleb makse tõsta."
+                  },
+                  {	"questionId": "4",
+                  "questionText": "Toidukaupade käibemaksu tuleb langetada."
+                  },
+                  {	"questionId": "5",
+                  "questionText": "Riiklikku lapsetoetust tuleb maksta vaid majanduslikes raskustes peredele."
+                  }
+                  ]
+}

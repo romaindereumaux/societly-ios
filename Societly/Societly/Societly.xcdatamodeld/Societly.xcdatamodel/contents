@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G1108" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Candidate" representedClassName="Candidate" syncable="YES">
+        <attribute name="candidateDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="candidateId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="distanceFromUser" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="districtId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="level" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="party" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stateId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="district" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="District" inverseName="candidate" inverseEntity="District" syncable="YES"/>
+        <relationship name="questionSet" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="QuestionSet" inverseName="candidate" inverseEntity="QuestionSet" syncable="YES"/>
+        <relationship name="state" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="State" inverseName="candidate" inverseEntity="State" syncable="YES"/>
+    </entity>
+    <entity name="District" representedClassName="District" syncable="YES">
+        <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="districtId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stateId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="candidate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Candidate" inverseName="district" inverseEntity="Candidate" syncable="YES"/>
+    </entity>
+    <entity name="Question" representedClassName="Question" syncable="YES">
+        <attribute name="answer" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="answerSource" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="answerSourceDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="answerSourceLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="questionDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="questionId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sortingIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="set" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="QuestionSet" inverseName="questions" inverseEntity="QuestionSet" syncable="YES"/>
+    </entity>
+    <entity name="QuestionSet" representedClassName="QuestionSet" syncable="YES">
+        <attribute name="setId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="candidate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Candidate" inverseName="questionSet" inverseEntity="Candidate" syncable="YES"/>
+        <relationship name="questions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Question" inverseName="set" inverseEntity="Question" syncable="YES"/>
+    </entity>
+    <entity name="State" representedClassName="State" syncable="YES">
+        <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stateId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="candidate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Candidate" inverseName="state" inverseEntity="Candidate" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Candidate" positionX="-18" positionY="54" width="128" height="225"/>
+        <element name="District" positionX="-27" positionY="90" width="128" height="120"/>
+        <element name="Question" positionX="-63" positionY="-18" width="128" height="180"/>
+        <element name="QuestionSet" positionX="-54" positionY="-9" width="128" height="105"/>
+        <element name="State" positionX="-36" positionY="81" width="128" height="105"/>
+    </elements>
+</model>

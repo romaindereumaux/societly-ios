@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CompassViewController">
+            <connections>
+                <outlet property="compassImage" destination="cw5-Lq-QPu" id="NCd-9g-iwa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_backround" translatesAutoresizingMaskIntoConstraints="NO" id="Mvp-1O-ALZ">
+                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_compass" translatesAutoresizingMaskIntoConstraints="NO" id="cw5-Lq-QPu">
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="cw5-Lq-QPu" secondAttribute="height" multiplier="1:1" id="3g1-8C-E2b"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_compass_type" translatesAutoresizingMaskIntoConstraints="NO" id="kCy-Jz-S9e" userLabel="Logo"/>
+            </subviews>
+            <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Mvp-1O-ALZ" secondAttribute="trailing" id="1CN-h6-O1D"/>
+                <constraint firstItem="Mvp-1O-ALZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="HuP-Pe-4Gl"/>
+                <constraint firstItem="kCy-Jz-S9e" firstAttribute="top" secondItem="cw5-Lq-QPu" secondAttribute="top" id="QYb-cB-qcK"/>
+                <constraint firstItem="cw5-Lq-QPu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="SHo-NZ-jUf"/>
+                <constraint firstItem="kCy-Jz-S9e" firstAttribute="bottom" secondItem="cw5-Lq-QPu" secondAttribute="bottom" id="UuN-Ea-z7S"/>
+                <constraint firstAttribute="trailing" secondItem="cw5-Lq-QPu" secondAttribute="trailing" id="bAq-q3-IXc"/>
+                <constraint firstItem="Mvp-1O-ALZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iIF-VP-Nse"/>
+                <constraint firstItem="cw5-Lq-QPu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="oKV-1h-HmN"/>
+                <constraint firstItem="kCy-Jz-S9e" firstAttribute="trailing" secondItem="cw5-Lq-QPu" secondAttribute="trailing" id="riH-dg-DYw"/>
+                <constraint firstAttribute="bottom" secondItem="Mvp-1O-ALZ" secondAttribute="bottom" id="s7u-yL-w4P"/>
+                <constraint firstItem="kCy-Jz-S9e" firstAttribute="leading" secondItem="cw5-Lq-QPu" secondAttribute="leading" id="zGs-QJ-6de"/>
+            </constraints>
+            <point key="canvasLocation" x="298" y="335"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_backround" width="320" height="568"/>
+        <image name="img_compass" width="320" height="320"/>
+        <image name="img_compass_type" width="320" height="320"/>
+    </resources>
+</document>
